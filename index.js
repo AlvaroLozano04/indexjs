@@ -9,7 +9,7 @@ http.createServer(function (req, res) {
     form.parse(req, function (err, fields, files) {
      
       var oldpath = files.filetoupload.filepath;
-      var newpath = 'D:/Source Code/nodjs2223/' + files.filetoupload.originalFilename;
+      var newpath = '.' + files.filetoupload.originalFilename;
       mv(oldpath, newpath, function (err) {
         if (err) throw err;
         else {
